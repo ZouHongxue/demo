@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="javaFileEncoding" value="utf-8"/>
+        <!-- 设置 注解 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        <!-- 连接数据库 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ds_0?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;failOverReadOnly=false"
+                        userId="root" password="root">
+        </jdbcConnection>
+
+        <!--Model-->
+        <javaModelGenerator targetPackage="com.data.sharding.model"
+                            targetProject="src/main/java" />
+        <!--mapper.xml-->
+        <sqlMapGenerator targetPackage="mybatis"
+                         targetProject="src/main/resources"/>
+        <!--Dao-->
+        <javaClientGenerator targetPackage="com.data.sharding.mapper" type="XMLMAPPER"
+                             targetProject="src/main/java"/>
+        <!-- table -->
+        <table tableName="user" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="false"/>
+        </table>
+    </context>
+</generatorConfiguration>
