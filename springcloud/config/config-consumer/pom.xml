@@ -3,17 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.example</groupId>
-        <artifactId>dubbo</artifactId>
+        <groupId>com.example.springcloud</groupId>
+        <artifactId>config</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.example.dubbo</groupId>
-    <artifactId>provider</artifactId>
+    <groupId>com.example.springcloud.config</groupId>
+    <artifactId>config-consumer</artifactId>
     <version>1.0.0</version>
-    <name>provider</name>
-    <description>Demo project for dubbo provider</description>
+    <name>consumer</name>
+    <description>Config Consumer project for Spring Cloud</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,10 +21,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sample</groupId>
-            <artifactId>api</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

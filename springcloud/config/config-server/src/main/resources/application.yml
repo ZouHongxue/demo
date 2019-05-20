@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///Users/coffee/projects/java/demo/springcloud/config/config-server/config-repo
+server:
+  port: 8888
