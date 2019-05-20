@@ -13,7 +13,7 @@ public class DatabaseShardingStrategy implements PreciseShardingAlgorithm<Intege
     @Override
     public String doSharding(Collection<String> collection, PreciseShardingValue<Integer> preciseShardingValue) {
         for (String each : collection) {
-            if (each.endsWith(Long.parseLong(preciseShardingValue.getValue().toString()) % 2+"")) {
+            if (each.endsWith(Long.parseLong(preciseShardingValue.getValue().toString()) % 2 + "")) {
                 return each;
             }
         }

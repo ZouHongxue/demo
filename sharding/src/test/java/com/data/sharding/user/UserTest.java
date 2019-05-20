@@ -38,9 +38,9 @@ public class UserTest {
             user.setId((Long) snowflakeShardingKeyGenerator.generateKey());
             System.out.println(user.getId());
             System.out.println(user.getId() % 2);
-            user.setEmail("hongxuezou@gmail.com"+i);
+            user.setEmail("hongxuezou@gmail.com" + i);
             user.setPassword("hello_world");
-            user.setUserName("邹洪学"+i);
+            user.setUserName("邹洪学" + i);
             user.setStatus(true);
             userMapper.insert(user);
         }

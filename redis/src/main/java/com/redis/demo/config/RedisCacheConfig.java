@@ -18,10 +18,10 @@ public class RedisCacheConfig {
         return RedisCacheConfiguration
                 .defaultCacheConfig()
                 .serializeKeysWith(RedisSerializationContext
-                    .SerializationPair
-                    .fromSerializer(new StringRedisSerializer()))
+                        .SerializationPair
+                        .fromSerializer(new StringRedisSerializer()))
                 .serializeValuesWith(RedisSerializationContext
-                    .SerializationPair
-                    .fromSerializer(new GenericJackson2JsonRedisSerializer()));
+                        .SerializationPair
+                        .fromSerializer(new GenericJackson2JsonRedisSerializer()));
     }
 }

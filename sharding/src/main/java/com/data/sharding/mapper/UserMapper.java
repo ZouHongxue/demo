@@ -1,6 +1,7 @@
 package com.data.sharding.mapper;
 
 import com.data.sharding.model.User;
+
 import java.util.List;
 
 public interface UserMapper {

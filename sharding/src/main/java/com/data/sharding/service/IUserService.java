@@ -10,6 +10,7 @@ public interface IUserService {
 
     /**
      * 插入用户
+     *
      * @param user 用户
      */
     void insertUser(User user);

@@ -8,11 +8,11 @@
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.dubbo</groupId>
+    <groupId>com.example.dubbo</groupId>
     <artifactId>consumer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>consumer</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Demo project for dubbo consumer</description>
 
     <properties>
         <java.version>1.8</java.version>

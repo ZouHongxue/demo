@@ -8,8 +8,8 @@
         <property name="javaFileEncoding" value="utf-8"/>
         <!-- 设置 注解 -->
         <commentGenerator>
-            <property name="suppressAllComments" value="true" />
-            <property name="suppressDate" value="true" />
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
         </commentGenerator>
         <!-- 连接数据库 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -19,7 +19,7 @@
 
         <!--Model-->
         <javaModelGenerator targetPackage="com.data.sharding.model"
-                            targetProject="src/main/java" />
+                            targetProject="src/main/java"/>
         <!--mapper.xml-->
         <sqlMapGenerator targetPackage="mybatis"
                          targetProject="src/main/resources"/>
@@ -27,7 +27,7 @@
         <javaClientGenerator targetPackage="com.data.sharding.mapper" type="XMLMAPPER"
                              targetProject="src/main/java"/>
         <!-- table -->
-        <table tableName="user" >
+        <table tableName="user">
             <generatedKey column="id" sqlStatement="Mysql" identity="false"/>
         </table>
     </context>
