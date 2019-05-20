@@ -1,8 +1,15 @@
 spring:
+  application:
+    name: spring-cloud-config-server
   cloud:
     config:
       server:
         git:
-          uri: file:///Users/coffee/projects/java/demo/springcloud/config/config-server/config-repo
+          uri: https://github.com/ZouHongxue/springcloud-config-repo
+          search-paths:
+          username:
+          password:
+          default-label: master
+
 server:
-  port: 8888
+  port: 9900
