@@ -8,11 +8,12 @@
         <version>1.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.dubbo</groupId>
+
+    <groupId>com.example.dubbo</groupId>
     <artifactId>provider</artifactId>
     <version>1.0.0</version>
     <name>provider</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Demo project for dubbo provider</description>
 
     <properties>
         <java.version>1.8</java.version>

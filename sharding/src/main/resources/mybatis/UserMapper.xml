@@ -12,7 +12,7 @@
     </resultMap>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         delete from user
-          where id = #{id,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
     </delete>
 
     <insert id="insert" parameterType="com.data.sharding.model.User">
@@ -27,11 +27,11 @@
     <update id="updateByPrimaryKey" parameterType="com.data.sharding.model.User">
         update user
         set user_name = #{userName,jdbcType=VARCHAR},
-          email = #{email,jdbcType=VARCHAR},
-          password = #{password,jdbcType=VARCHAR},
-          status = #{status,jdbcType=BIT},
-          created_at = #{createdAt,jdbcType=TIMESTAMP},
-          updated_at = #{updatedAt,jdbcType=TIMESTAMP}
+        email = #{email,jdbcType=VARCHAR},
+        password = #{password,jdbcType=VARCHAR},
+        status = #{status,jdbcType=BIT},
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+        updated_at = #{updatedAt,jdbcType=TIMESTAMP}
         where id = #{id,jdbcType=INTEGER}
     </update>
 

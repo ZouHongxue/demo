@@ -31,25 +31,25 @@ import java.util.Properties;
 @Configuration
 public class DruidConfig {
     /**
-     *加载时读取指定的配置信息,前缀为spring.datasource.druid
+     * 加载时读取指定的配置信息,前缀为spring.datasource.druid
      */
     @Bean("ds0")
     @ConfigurationProperties(prefix = "spring.datasource.druid.master")
-    public DruidDataSource getDruidSourceDs0(){
+    public DruidDataSource getDruidSourceDs0() {
         return new DruidDataSource();
     }
 
     @Bean("ds1")
     @ConfigurationProperties(prefix = "spring.datasource.druid.second")
-    public DruidDataSource getDruidSourceDs1(){
+    public DruidDataSource getDruidSourceDs1() {
         return new DruidDataSource();
     }
 
     @Primary
     @Bean("shardingDataSource")
     public DataSource dataSourceConfiguration(@Qualifier("ds0") DataSource dataSourceDs0,
-                                                           @Qualifier("ds1") DataSource dataSourceDs1) throws SQLException {
-        Map<String, DataSource> dataSourceMap = new HashMap<String, DataSource>(4){{
+                                              @Qualifier("ds1") DataSource dataSourceDs1) throws SQLException {
+        Map<String, DataSource> dataSourceMap = new HashMap<String, DataSource>(4) {{
             put("ds0", dataSourceDs0);
             put("ds1", dataSourceDs1);
         }};
