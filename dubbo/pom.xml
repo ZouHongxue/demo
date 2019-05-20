@@ -12,6 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>dubbo</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
 
     <properties>
         <dubbo.version>2.7.1</dubbo.version>
